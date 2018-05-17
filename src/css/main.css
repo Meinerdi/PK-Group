@@ -34,8 +34,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -69,8 +68,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -202,8 +200,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -234,8 +231,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -303,9 +299,85 @@ template {
 
 html {
   font-size: 62.5%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-y: hidden;
+  font-family: 'Roboto'; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+  box-sizing: inherit; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white; }
+
+.main {
+  font-size: 1.8rem; }
+
+.header__nav {
+  position: absolute;
+  z-index: 1;
+  height: 5rem;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.headerList {
+  display: flex;
+  justify-content: flex-end; }
+
+.headerList__link {
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  display: block; }
+
+.headerList__item {
+  border-right: 1px solid #fff; }
+
+.headerList__item:last-child {
+  border-right: none; }
+
+.headerList__item:hover .headerList__link {
+  background-color: #de5e60;
+  transform: rotate3d(0, 1, 0, 360deg); }
+
+.header__logo {
+  margin: 0 1rem 0;
+  font: 2.3rem 'Titan One'; }
+
+.header {
+  position: relative; }
+
+.header__title {
+  position: absolute;
+  font: 5rem 'Titan One';
+  color: #fff;
+  text-shadow: 3px 3px 2px #000;
+  width: 60rem;
+  left: calc(50% - 30rem);
+  top: 50%;
+  text-align: center; }
+
+.header__video {
+  width: 100%; }
+
+.about {
+  display: flex;
+  max-width: 130rem;
+  background: linear-gradient(to right, #0e0e0e 44%, #7d7e7d 58%); }
+
+.about__leftSide, .about__rightSide {
+  width: 50%;
+  padding: 2rem;
+  color: white; }
+
+.about__rightSide {
+  color: black; }
