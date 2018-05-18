@@ -1,9 +1,9 @@
+/*RESETS-------------------------------------------------------------------------------------------*/
 @import "./node_modules/normalize.css/normalize";
 
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    overflow-y: hidden;
     font-family: 'Roboto';
 }
 
@@ -18,85 +18,69 @@ ul {
 
 a {
     text-decoration: none;
-    font-size: 1.4rem;
-    color: white;
 }
-
+/*-------------------------------------------------------------------------------------------------*/
+/*GLOBAL-------------------------------------------------------------------------------------------*/
 .main {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
-
-.header__nav {
-    position: absolute;
-    z-index: 1;
-    height: 5rem;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    opacity: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/*-------------------------------------------------------------------------------------------------*/
+/*HEADER-------------------------------------------------------------------------------------------*/
+.header {
+    position: relative;
+    &__nav {
+        position: absolute;
+        z-index: 1;
+        height: 5rem;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        opacity: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__title {
+        position: absolute;
+        color: #fff;
+        text-shadow: 3px 3px 2px #000;
+        left: calc(50% - 30rem);
+        top: 50%;
+        text-align: center;
+    }
+    &__video {
+        width: 100%;
+    }
 }
 
 .headerList {
     display: flex;
-    justify-content: flex-end;
+    &__link {
+        padding: 1rem 1.2rem;
+        text-transform: uppercase;
+        transition: 0.5s ease;
+        display: block;
+    }
+    &__item {
+        border-right: 1px solid #fff;
+    }
+    &__item:last-child {
+        border-right: none;
+    }
+    &__item:hover .headerList__link {
+        background-color: #de5e60;
+        transform: rotate3d(0,1,0,360deg);
+    }
 }
-
-.headerList__link {
-    padding: 1rem 1.2rem;
-    text-transform: uppercase;
-    transition: 0.5s ease;
-    display: block;
-}
-.headerList__item {
-    border-right: 1px solid #fff;
-}
-.headerList__item:last-child {
-    border-right: none;
-}
-
-.headerList__item:hover .headerList__link {
-    background-color: #de5e60;
-    transform: rotate3d(0,1,0,360deg);
-}
-
-.header__logo {
-    margin: 0 1rem 0;
-    font: 2.3rem 'Titan One';
-}
-
-.header {
-    position: relative;
-}
-
-.header__title {
-    position: absolute;
-    font: 5rem 'Titan One';
-    color: #fff;
-    text-shadow: 3px 3px 2px #000;
-    width: 60rem;
-    left: calc(50% - 30rem);
-    top: 50%;
-    text-align: center;
-}
-
-.header__video {
-    width: 100%;
-}
-
+/*-------------------------------------------------------------------------------------------------*/
+/*ABOUT-------------------------------------------------------------------------------------------*/
 .about {
     display: flex;
     max-width: 130rem;
-    background: linear-gradient(to right, rgba(14,14,14,1) 44%,rgba(125,126,125,1) 58%);  
-}
-
-.about__leftSide {
-    width: 50%;
-    padding: 2rem;
-    color: white;
-}
-.about__rightSide {
-    @extend .about__leftSide;
-    color: black;
+    &__leftSide {
+        width: 50%;
+        padding: 3rem 2rem 0;
+    }
+    &__rightSide {
+        @extend .about__leftSide
+    }
 }
