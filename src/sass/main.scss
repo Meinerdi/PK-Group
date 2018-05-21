@@ -1,6 +1,35 @@
 /*RESETS-------------------------------------------------------------------------------------------*/
 @import "./node_modules/normalize.css/normalize";
 
+/*FONTS--------------------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Arame';
+    src: url("/src/fonts/Arame/Arame.ttf");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: 'BlenderPro-Book';
+    src: url("/src/fonts/Blender/BlenderPro-Book.otf");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: 'BlenderPro-Medium';
+    src: url("/src/fonts/Blender/BlenderPro-Medium.otf");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: 'BlenderPro-Heavy';
+    src: url("/src/fonts/Blender/BlenderPro-Heavy.otf");
+    font-style: normal;
+    font-weight: normal
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
