@@ -33,7 +33,7 @@
     font-weight: normal;
 }
 
-// // TODO: for test
+// // TODO: FOR DEV
 body {
     background: blueviolet;
 }
@@ -77,14 +77,13 @@ a {
     position: fixed;
     height: 100vh;
     width: 10rem;
-    // TODO: for test
+    // TODO: FOR DEV
     background: #000;
     padding: 3rem 0;
     left: 0;
     top: 0;
     z-index: 1;
-    // FIXME:
-    border-right: 1px solid rgba(185, 185, 185, 0.603); 
+    border-right: 1px solid rgba(255,255,255,0.1); 
 
     &__coor {
         transform: rotate(-90deg);
@@ -116,6 +115,7 @@ a {
         right: -.1rem;
         bottom: -1.7rem;
         background: #fff;
+        animation: headerLine 5s cubic-bezier(0.4, 0.25, 0, 1) infinite;
     }
 }
 
@@ -134,7 +134,7 @@ a {
     bottom: 0;
     right: 0;
     padding: 0 0 0 10rem;
-    // TODO: REMOVE FOR TEST
+    // TODO: FOR DEV
     background: green;
     width: 100%;
 
@@ -149,4 +149,8 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+}
+svg {
+    height: 10px;
+    width: 10px;
 }
