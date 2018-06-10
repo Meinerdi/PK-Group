@@ -596,7 +596,7 @@ img {
     /* the parent */ }
     .product__sliderSide button {
       position: absolute;
-      top: -24rem;
+      top: -24.5rem;
       font-size: 0;
       width: 4.5rem;
       height: 4.5rem;
@@ -609,7 +609,7 @@ img {
     .product__sliderSide .slider-nav {
       position: relative; }
       .product__sliderSide .slider-nav .product__sliderItem {
-        margin-right: 3rem; }
+        margin: 0 1.5rem; }
     .product__sliderSide .slider-for {
       position: relative;
       z-index: -1; }
@@ -622,9 +622,9 @@ img {
       background: url("../images/left-arrow.png") 50% 50% no-repeat #dbdad1;
       opacity: .7; }
     .product__sliderSide .slick-slide {
-      margin: 0 30px; }
+      margin: 0 1.5rem; }
     .product__sliderSide .slick-list {
-      margin: 0 -30px; }
+      margin: 0 -1.5rem; }
   .product__buySide {
     max-width: 45.7rem;
     position: relative; }
