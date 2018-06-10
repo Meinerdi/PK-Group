@@ -591,7 +591,9 @@ img {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    /* the slides */
+    /* the parent */ }
     .product__sliderSide button {
       position: absolute;
       top: -24rem;
@@ -619,6 +621,10 @@ img {
       left: -2.25rem;
       background: url("../images/left-arrow.png") 50% 50% no-repeat #dbdad1;
       opacity: .7; }
+    .product__sliderSide .slick-slide {
+      margin: 0 30px; }
+    .product__sliderSide .slick-list {
+      margin: 0 -30px; }
   .product__buySide {
     max-width: 45.7rem;
     position: relative; }
