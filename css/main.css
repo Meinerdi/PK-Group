@@ -449,6 +449,7 @@ img {
 .slick-arrow.slick-hidden {
   display: none; }
 
+/*MIXINS*/
 /*PARTS*/
 .header, .wrapperMain, .haveQuestions, .footer {
   max-width: 1140px;
@@ -517,6 +518,26 @@ img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    .header__productListAdd {
+      position: absolute;
+      display: none;
+      background: #fff;
+      border: .1rem solid #777474;
+      padding: 1rem 0;
+      -webkit-box-shadow: 1px 0px 24px -3px rgba(0, 0, 0, 0.75);
+              box-shadow: 1px 0px 24px -3px rgba(0, 0, 0, 0.75); }
+      .header__productListAdd li {
+        padding: 1rem 1rem; }
+      .header__productListAdd a {
+        color: #393939;
+        text-transform: uppercase; }
+    .header__productList > li:hover .header__productListAdd {
+      display: block; }
+    .header__productList a:hover {
+      color: #f47a21;
+      -webkit-transition: .2s ease;
+      -o-transition: .2s ease;
+      transition: .2s ease; }
   .header__productLink {
     color: #393939;
     text-transform: uppercase;
@@ -577,7 +598,7 @@ img {
     display: -ms-flexbox;
     display: flex; }
   .product__sliderSide {
-    width: 65.1rem;
+    max-width: 65.1rem;
     margin: 0 3rem 0 0;
     display: -webkit-box;
     display: -webkit-flex;
@@ -676,11 +697,22 @@ img {
       font: 1.8rem 'AvenirNextCyr-Medium'; }
   .product__priceTitle, .product__price {
     font-size: 2.4rem;
-    margin: 0 10rem 0 0; }
+    margin-right: 10rem; }
   .product__price {
     font-family: 'AvenirNextCyr-Bold'; }
   .product__priceHolder {
     margin: 0 0 5rem; }
+    @media only screen and (max-width: 111rem) {
+      .product__priceHolder {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .product__buttonHolder {
     max-width: 36rem; }
 
@@ -737,6 +769,14 @@ img {
   display: flex;
   font: 2.4rem 'AvenirNextCyr-Bold';
   color: #393939; }
+  @media only screen and (max-width: 48rem) {
+    .tabs__caption {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: center; } }
   .tabs__caption li {
     cursor: pointer;
     position: relative;
@@ -766,6 +806,9 @@ img {
 .characteristics__table {
   width: 100%;
   text-align: left; }
+  @media only screen and (max-width: 48rem) {
+    .characteristics__table {
+      overflow-x: scroll; } }
   .characteristics__table th {
     font: 1.8rem 'AvenirNextCyr-Medium';
     color: #f47821;
@@ -779,6 +822,13 @@ img {
 
 .characteristics {
   margin: 0 0 3rem; }
+  @media only screen and (max-width: 48rem) {
+    .characteristics {
+      padding: 0 1rem; } }
+
+@media only screen and (max-width: 48rem) {
+  .additionalServices {
+    padding: 0 1rem; } }
 
 .additionalServices__list {
   display: -webkit-box;
@@ -797,6 +847,10 @@ img {
     padding: 0 0 0 7.5rem;
     position: relative;
     margin: 0 0 1.5rem; }
+    @media only screen and (max-width: 48rem) {
+      .additionalServices__list li {
+        width: 100%;
+        margin: 0 0 3rem; } }
     .additionalServices__list li:before {
       content: counter(point);
       display: block;
@@ -816,6 +870,12 @@ img {
       -webkit-order: 3;
           -ms-flex-order: 3;
               order: 3; }
+      @media only screen and (max-width: 48rem) {
+        .additionalServices__list li:nth-child(2) {
+          -webkit-box-ordinal-group: 3;
+          -webkit-order: 2;
+              -ms-flex-order: 2;
+                  order: 2; } }
     .additionalServices__list li:nth-child(3) {
       -webkit-box-ordinal-group: 3;
       -webkit-order: 2;
@@ -832,6 +892,12 @@ img {
 
 .reviews {
   margin: 0 0 8.5rem; }
+  @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+    .reviews {
+      padding: 0 1rem; } }
+  @media only screen and (max-width: 48rem) {
+    .reviews {
+      padding: 0 1rem; } }
   .reviews .sectionTitle {
     margin: 0 0 9.5rem; }
   .reviews__holder {
@@ -841,10 +907,34 @@ img {
     display: flex;
     position: relative;
     margin: 0 0 4rem; }
+    @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+      .reviews__holder {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
+    @media only screen and (max-width: 48rem) {
+      .reviews__holder {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
   .reviews__item {
     padding: 3rem 3rem 3rem 2.5rem;
     border: .1rem solid #d7d7d7;
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    position: relative; }
+    @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+      .reviews__item {
+        width: -webkit-calc(50% - 1.5rem);
+        width: calc(50% - 1.5rem);
+        margin-right: 2;
+        margin-bottom: 8rem; } }
+    @media only screen and (max-width: 48rem) {
+      .reviews__item {
+        width: 100%;
+        margin: 0 0 8rem; } }
+    @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+      .reviews__item:nth-child(2n) {
+        margin-right: 0; } }
     .reviews__item:last-child {
       margin-right: 0; }
   .reviews__avatarHolder {
@@ -925,12 +1015,44 @@ img {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    @media only screen and (max-width: 48rem) {
+      .haveQuestions__form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        padding: 0 1rem; } }
+    @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+      .haveQuestions__form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 80%;
+        padding: 0 1rem;
+        margin: 0 auto; } }
     .haveQuestions__form input[type="text"],
     .haveQuestions__form input[type="tel"],
     .haveQuestions__form input[type="submit"] {
       width: 100%;
       height: 4rem;
       border: none; }
+      @media only screen and (max-width: 48rem) {
+        .haveQuestions__form input[type="text"],
+        .haveQuestions__form input[type="tel"],
+        .haveQuestions__form input[type="submit"] {
+          margin-bottom: 2rem; } }
     .haveQuestions__form input[type="submit"] {
       margin: 0 0 2rem;
       letter-spacing: .12rem;
@@ -1000,6 +1122,15 @@ img {
     .haveQuestions__formColumn {
       width: 26rem;
       margin-right: 3rem; }
+      @media only screen and (max-width: 48rem) {
+        .haveQuestions__formColumn {
+          width: 100%;
+          margin-right: 0; } }
+      @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+        .haveQuestions__formColumn {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 2rem; } }
       .haveQuestions__formColumn:last-child {
         margin-right: 0; }
       .haveQuestions__formColumn a {
@@ -1035,8 +1166,31 @@ img {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+    .footer {
+      width: 50%;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+  @media only screen and (max-width: 48rem) {
+    .footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .footer div {
     width: 25%; }
+    @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
+      .footer div {
+        width: -webkit-calc(50% - 4rem);
+        width: calc(50% - 4rem);
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 48rem) {
+      .footer div {
+        width: 100%;
+        margin-bottom: 3rem;
+        padding: 0 1rem; } }
   .footer__logoSection {
     margin-right: 2rem; }
     .footer__logoSection .logo {
@@ -1057,6 +1211,11 @@ img {
         border-bottom: .2rem solid #fcd3b5; }
     .footer__menuSection li {
       margin: 0 0 .7rem; }
+    @media only screen and (max-width: 48rem) {
+      .footer__menuSection {
+        margin-right: 0;
+        padding-left: 1rem;
+        margin-bottom: 2rem; } }
   .footer__contactsSection .tel {
     font-family: 'AvenirNextCyr-Bold';
     display: block;
@@ -1091,6 +1250,9 @@ img {
       -webkit-transition: .2s ease;
       -o-transition: .2s ease;
       transition: .2s ease; }
+  @media only screen and (max-width: 48rem) {
+    .footer .buttonRecall {
+      width: 100%; } }
 
 .buttonRecall:hover {
   color: #000;
