@@ -462,13 +462,7 @@ img {
     margin: 0 0 1.5rem; }
     @media only screen and (max-width: 740px) {
       .header__mainMenu {
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-                justify-content: space-between; } }
+        display: none; } }
     .header__mainMenu a {
       color: #949494;
       padding: 0 2rem;
@@ -521,11 +515,7 @@ img {
     text-align: end; }
     @media only screen and (max-width: 692px) {
       .header__contacts {
-        -webkit-box-ordinal-group: 6;
-        -webkit-order: 5;
-            -ms-flex-order: 5;
-                order: 5;
-        width: 50%; } }
+        display: none; } }
     .header__contactsLink {
       color: #393939;
       text-decoration: underline;
@@ -634,11 +624,7 @@ img {
       top: 42%; }
   @media only screen and (max-width: 692px) {
     .header .buttonRecall, .wrapperMain .buttonRecall, .haveQuestions .buttonRecall, .footer .buttonRecall {
-      -webkit-box-ordinal-group: 5;
-      -webkit-order: 4;
-          -ms-flex-order: 4;
-              order: 4;
-      width: 50%; } }
+      display: none; } }
   @media only screen and (max-width: 692px) {
     .header .logo, .wrapperMain .logo, .haveQuestions .logo, .footer .logo {
       width: 50%;
@@ -683,6 +669,20 @@ img {
     display: flex;
     color: #393939;
     margin: 0 0 3rem; }
+    @media only screen and (max-width: 771px) {
+      .product__breadCrumbs {
+        padding-left: 1rem; } }
+    @media only screen and (max-width: 379px) {
+      .product__breadCrumbs {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     .product__breadCrumbs li:after {
       content: ' /'; }
     .product__breadCrumbs li:last-child:after {
@@ -1411,31 +1411,33 @@ img {
                 box-shadow: -1px 1px 29px -1px rgba(0, 0, 0, 0.75); }
     .haveQuestions__form input[type="text"],
     .haveQuestions__form input[type="tel"] {
-      padding: 0 2rem; }
+      padding: 0 2rem;
+      font-family: 'AvenirNextCyr-Demi';
+      color: #eb7e27; }
       .haveQuestions__form input[type="text"]::-webkit-input-placeholder,
       .haveQuestions__form input[type="tel"]::-webkit-input-placeholder {
         color: #eb7e27;
-        font-family: 'AvenirNextCyr-Demi';
+        font-family: 'AvenirNextCyr-Light';
         letter-spacing: .12rem; }
       .haveQuestions__form input[type="text"]::-moz-placeholder,
       .haveQuestions__form input[type="tel"]::-moz-placeholder {
         color: #eb7e27;
-        font-family: 'AvenirNextCyr-Demi';
+        font-family: 'AvenirNextCyr-Light';
         letter-spacing: .12rem; }
       .haveQuestions__form input[type="text"]:-ms-input-placeholder,
       .haveQuestions__form input[type="tel"]:-ms-input-placeholder {
         color: #eb7e27;
-        font-family: 'AvenirNextCyr-Demi';
+        font-family: 'AvenirNextCyr-Light';
         letter-spacing: .12rem; }
       .haveQuestions__form input[type="text"]::-ms-input-placeholder,
       .haveQuestions__form input[type="tel"]::-ms-input-placeholder {
         color: #eb7e27;
-        font-family: 'AvenirNextCyr-Demi';
+        font-family: 'AvenirNextCyr-Light';
         letter-spacing: .12rem; }
       .haveQuestions__form input[type="text"]::placeholder,
       .haveQuestions__form input[type="tel"]::placeholder {
         color: #eb7e27;
-        font-family: 'AvenirNextCyr-Demi';
+        font-family: 'AvenirNextCyr-Light';
         letter-spacing: .12rem; }
       .haveQuestions__form input[type="text"]:focus,
       .haveQuestions__form input[type="tel"]:focus {
@@ -1451,16 +1453,6 @@ img {
         -webkit-transition: .3s ease;
         -o-transition: .3s ease;
         transition: .3s ease; }
-    .haveQuestions__form input[type="tel"]::-webkit-input-placeholder {
-      font-family: 'AvenirNextCyr-Light'; }
-    .haveQuestions__form input[type="tel"]::-moz-placeholder {
-      font-family: 'AvenirNextCyr-Light'; }
-    .haveQuestions__form input[type="tel"]:-ms-input-placeholder {
-      font-family: 'AvenirNextCyr-Light'; }
-    .haveQuestions__form input[type="tel"]::-ms-input-placeholder {
-      font-family: 'AvenirNextCyr-Light'; }
-    .haveQuestions__form input[type="tel"]::placeholder {
-      font-family: 'AvenirNextCyr-Light'; }
     .haveQuestions__formColumn {
       width: 26rem;
       margin-right: 3rem; }
