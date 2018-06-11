@@ -696,6 +696,9 @@ img {
         transition: .3s ease; }
     .product__breadCrumbs li {
       padding: 0 0 0 .5rem; }
+      @media only screen and (max-width: 379px) {
+        .product__breadCrumbs li {
+          padding-left: 0; } }
     .product__breadCrumbs li:first-child {
       padding: 0; }
     .product__breadCrumbs li:first-child > a {
