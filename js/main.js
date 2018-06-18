@@ -45,3 +45,7 @@ $('ul.tabs__caption').each(function() {
 $('.header__productListBurger').click(function(){
   $('.header__productList').toggleClass("active");
 });
+
+$('.header__productListBurger').click(function(){
+  $('.header__productListBurger').toggleClass("cross");
+});
