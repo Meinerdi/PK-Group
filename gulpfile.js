@@ -1,6 +1,3 @@
-//НЕ ЗАБЫТЬ СОБРАТЬ БИБЛИОТЕКИ В LIBS.SCSS
-//НЕ ЗАБЫТЬ ПОДКЛЮЧИТЬ NORMALIZE.CSS
-//НЕ ЗАБЫТЬ ПОДКЛЮЧИТЬ ШРИФТЫ
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
@@ -17,14 +14,14 @@ var gulp = require('gulp'),
 
     gulp.task('sass', function() {
         return gulp.src('src/sass/*.scss')
-        .pipe(wait(100)) // 200, 300...
+        .pipe(wait(100)) // 200, 300... For fix saves on VS Code
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('src/css/'))
         .pipe(browserSync.reload({stream: true}))
     });
 
-//СЮДА ПИСАТЬ ССЫЛКИ НА СКРИПТЫ БИБЛИОТЕК
+//Path to JS libs
 gulp.task('scripts', function() {
     return gulp.src([
         'src/libs/jquery/dist/jquery.min.js',
@@ -35,6 +32,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('src/js'))
 });
 
+//Minify CSS libs
 gulp.task('css-libs', ['sass'], function() {
     return gulp.src('src/css/libs.css')
     .pipe(cssnano())
@@ -42,6 +40,7 @@ gulp.task('css-libs', ['sass'], function() {
     .pipe(gulp.dest('src/css'));
 });
 
+//Browser Sync
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
@@ -51,16 +50,17 @@ gulp.task('browser-sync', function() {
     });
 });
 
+//Delete "dist" folder before "gulp build"
 gulp.task('clean', function() {
     return del.sync('dist');
 });
 
-// ЕСЛИ НУЖНО ПОЧИСТИТЬ КЭШ
+// If need clean cash (for optimize pictures)
 gulp.task('clear', function() {
     return cache.clearAll();
 });
 
-//СЮДА ВПИСАТЬ ВСЕ КАРТИНКИ
+//Path to images for optimize
 gulp.task('img', function() {
     return gulp.src('src/images/**/*')
     .pipe(cache(imagemin({
@@ -72,13 +72,14 @@ gulp.task('img', function() {
     .pipe(gulp.dest('dist/images'));
 });
 
-//СЮДА ПИСАТЬ ВСЕ ФАЙЛЫ КОТОРЫЕ ДОЛЖНЫ МОНИТОРИТЬСЯ ПРИ ИЗМЕНЕНИЯХ (HTML,SCSS,JS)
+//Path to watch file changes for "browser sync"
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
+//Build command
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildCss = gulp.src([
         'src/css/main.css',
