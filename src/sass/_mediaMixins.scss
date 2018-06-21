@@ -1,0 +1,41 @@
+// < 480 - смартфоны
+// 480 - 639 - планщеты
+// 640 - 959 - планшеты лендскейп
+// 960 - 1199 - ноуты
+// 1200 - 1599 - компы
+// > 1600 - широкий экран
+
+// $small: 48rem;
+
+@mixin respond-to($media) {
+  @if $media == phones {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 1022px) { @content; }
+  }
+  @else if $media == fix {
+    @media only screen and (max-width: 1110px) { @content; }
+  }
+}
+
+
+// .block {
+//   float: left;
+//   width: 250px;
+//   @include respond-to(handhelds) { width: 100% ;}
+//   @include respond-to(medium-screens) { width: 125px; }
+//   @include respond-to(wide-screens) { float: none; }
+// }
+
+// @mixin respond-to($media) {
+//     @if $media == Phones {
+//       @media only screen and (max-width: 63.9rem) { @content; }
+//     }
+//     @else if $media == medium-screens {
+//       @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+//     }
+//     @else if $media == wide-screens {
+//       @media only screen and (min-width: $large) { @content; }
+//     }
+// }

@@ -1,0 +1,14 @@
+/*NORMALIZE*/   @import "./node_modules/normalize.css/normalize"; 
+/*FONTS*/       @import "fonts"; 
+/*MY RESSETS*/  @import "myRessets"; 
+/*CSS LIBS*/    @import "libs/libs";
+/*MIXINS*/      @import "mediaMixins";
+
+/*PARTS*/
+@import "blocks/header";
+@import "blocks/product";
+@import "blocks/characteristics";
+@import "blocks/additionalServices";
+@import "blocks/reviews";
+@import "blocks/haveQuestions";
+@import "blocks/footer";

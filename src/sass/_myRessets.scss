@@ -1,0 +1,34 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+body {
+    font-family: 'AvenirNextCyr-Regular';
+    font-size: 1.6rem;
+}
+
+ul,ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

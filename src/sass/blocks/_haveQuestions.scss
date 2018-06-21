@@ -1,0 +1,122 @@
+.wrapperHaveQuestions {
+    background: url("../images/form-background.png") -290px -554px, linear-gradient(to right, #f9a322 0%, #f57821 100%);
+    box-shadow: 0px 1.1rem 2.7rem 0.145rem rgba(0, 0, 0, 0.22);
+}
+
+.haveQuestions {
+    @extend .header;
+    padding: 7.8rem 0 6.2rem;
+    &__text {
+        color: #fff;
+        text-align: center;
+        width: 32rem;
+        margin: 0 auto 3rem;
+        letter-spacing: .12rem;
+        line-height: 1.3;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+
+        @include respond-to(phones) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        @include respond-to(tablets) {
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            padding: 0 1rem;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="submit"] {
+            width: 100%;
+            height: 4rem;
+            border: none;
+
+            @include respond-to(phones) {
+               margin-bottom: 2rem;
+            }
+        }
+        input[type="submit"] {
+            margin: 0 0 2rem;
+            letter-spacing: .12rem;
+            font-family: 'AvenirNextCyr-Medium';
+            cursor: pointer;
+            background: #252525;
+            color: #fff;
+
+            &:hover {
+                color: #000;
+                transition: .5s ease;
+                background: #fff;
+                outline: .1rem solid #000;
+                box-shadow: -1px 1px 29px -1px rgba(0, 0, 0, 0.75);
+            }
+        }
+        input[type="text"],
+        input[type="tel"] {
+            padding: 0 2rem;
+            font-family: 'AvenirNextCyr-Demi';
+            color: #eb7e27;
+            &::placeholder {
+                color: #eb7e27;
+                font-family: 'AvenirNextCyr-Light';
+                letter-spacing: .12rem;
+            }
+            &:focus {
+                box-shadow: 1px 0px 24px -3px rgba(0, 0, 0, 0.75);
+                transition: .3s ease;
+                
+            }
+            &:hover {
+                box-shadow: 1px 0px 24px -3px rgba(0, 0, 0, 0.75);
+                transition: .3s ease;
+            }
+        }
+        &Column {
+            width: 26rem;
+            margin-right: 3rem;
+
+            @include respond-to(phones) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            @include respond-to(tablets) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                text-decoration: underline;
+                font-size: 1.4rem;
+                color: #e9e9e9;
+            }
+            label {
+                font-size: 1.4rem;
+                color: #e9e9e9;
+            }
+        }
+    }
+}
+
+.sectionTitle--white {
+    color: #fff;
+    text-align: center;
+}
+
+.haveQestions__formColumn3 {
+    display: flex;
+    flex-direction: column;
+}

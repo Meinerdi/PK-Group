@@ -1,0 +1,112 @@
+.reviews {
+    margin: 0 0 8.5rem;
+    
+    @include respond-to(tablets) {
+        padding: 0 1rem;
+    }
+
+    @include respond-to(phones) {
+        padding: 0 1rem;
+    }
+
+    .sectionTitle {
+        margin: 0 0 9.5rem;
+    }
+
+    &__holder {
+        display: flex;
+        position: relative;
+        margin: 0 0 4rem;
+
+        @include respond-to(tablets) {
+            flex-wrap: wrap;
+        }
+
+        @include respond-to(phones) {
+            flex-wrap: wrap;
+        }
+        
+    }
+
+    &__item {
+        padding: 3rem 3rem 3rem 2.5rem;
+        border: .1rem solid #d7d7d7;
+        margin-right: 3rem;
+        position: relative;
+        
+        @include respond-to(tablets) {
+            width: calc(50% - 1.5rem);
+            margin-right: 2;
+            margin-bottom: 8rem;
+        }
+
+        @include respond-to(phones) {
+            width: 100%;
+            margin: 0 0 8rem;
+        }
+
+        &:nth-child(2n) {
+            @include respond-to(tablets) {
+                margin-right: 0;
+            }
+            
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__avatarHolder {
+        width: 10.5rem;
+        height: 10.5rem;
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        top: -6rem;
+        background: url('../images/review-avatar.jpg') no-repeat -95px -13px;
+    }
+
+    &__name {
+        padding-left: 11.5rem;
+        font-family: 'HelveticaNeueCyr-Medium';
+        color: #f47a21;
+    }
+
+    &__company {
+        padding-left: 11.5rem;
+        font: 1.4rem 'HelveticaNeueCyr-Light';
+        color: #959595;
+        margin: 0 0 1.6rem;
+    }
+    &__text {
+        color: #282828;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        letter-spacing: .04rem;
+    }
+    &__readNextLink {
+        color: #949494;
+        font-size: 1.4rem;
+        text-decoration: underline;
+        &:hover {
+            color: #000;
+            transition: .5s ease;
+        }
+    }
+    &__allRewiewsLink {
+        color: #9b9b9b;
+        font-size: 1.8rem;
+        text-decoration: underline;
+
+        &:hover {
+            color: #000;
+            transition: .5s ease;
+        }
+    }
+}
+
+.allRewiewsLink__holder {
+    display: flex;
+    justify-content: center;
+}
